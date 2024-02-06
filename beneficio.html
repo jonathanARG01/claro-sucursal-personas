@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="./style.css">
+        <title>Claro Sucursal Personas</title>
+    </head>
+
+    <body>
+        
+
+        <div class="sucursal-personas">
+
+            <div class="container mt-3">
+
+                <ol class="breadcrumb d-none d-md-flex">
+                    <li class="breadcrumb-item"><a href="#">Personas</a></li>
+                    <li class="breadcrumb-item"><a href="#">Servicios</a></li>
+                    <li class="breadcrumb-item"><a href="#">ClaroClub</a></li>
+                    <li class="breadcrumb-item"><a href="#">Destacadas</a></li>
+                    <li class="breadcrumb-item active">Farmacia Ahumada</li>
+                </ol>
+
+                <a class="back d-block d-md-none" href="./index.html">Volver</a>
+
+                <img class="img-fluid d-none d-md-block w-100" src="./img/img-single.jpg" alt="Img Single">
+                <img class="img-fluid d-block d-md-none w-100" src="./img/img-single-mobile.jpg" alt="Img Single">
+
+                <div class="bg-container mt-5">
+
+                    <h3><img src="./img/icon-benefit.svg" alt="Icon Benefit"> 20% de descuento en Farmacia Ahumada</h3>
+
+                    <ul>
+                        <li>¿Buscando descuentos en medicamentos, belleza, nutrición, etc?, Genial, porque con Claro Club tienes un 20% de descuento en Farmacias Ahumada en las compras presenciales.</li>
+                        <li>Obtén tu código promocional. Encuentra tu código en la sección mis cupones y preséntalo al momento de pagar.</li>
+                        <li>Condiciones del cupón:</li>
+                        <li>Exclusivo en locales físicos.</li>
+                        <li>Maximo un cupón por cliente al mes.</li>
+                        <li>No acumulable con otros descuentos o promociones.</li>
+                        <li>Descuento valido hasta Marzo de 2024 o hasta acabar stock.</li>
+                    </ul>
+
+                    <a class="btn-cupones mt-5" data-toggle="modal" data-target="#modalCodigo">Obtener Cupón</a>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalCodigo" tabindex="-1" role="dialog" aria-labelledby="modalCodigoLabel" aria-hidden="true">
+            
+            <div class="modal-dialog" role="document">
+            
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h3><img src="./img/icon-benefit.svg" alt="Icon Benefit"> 20% de descuento en Farmacia Ahumada</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Tu código es:</p>
+                        <div class="box-code">
+                            <span class="code">00684-81723</span>
+                            <button>
+                                <img id="copy" src="./img/icon-copy.svg" alt="Copy">
+                            </button>
+                        </div>
+                        <span class="copiado">Código copiado</span>
+                        <p>Tu cupón se ha guardado exitosamente, si lo necesitas recuerda que puedes ir a la sección “<span><a href="./cupones.html">Mis cupones</a></span>” y ver los cupones activos.</p>
+                        <a class="btn-cupones">Descargar cupón</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./script.js"></script>
+
+    </body>
+
+</html>
+

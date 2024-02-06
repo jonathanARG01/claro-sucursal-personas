@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="./style.css">
+        <title>Claro Sucursal Personas</title>
+    </head>
+
+    <body>
+        
+
+        <div class="sucursal-personas">
+
+            <div class="container-filtros container-fluid">
+                
+                <a class="btn-cupones mr-4" href="#">Mis cupones</a>
+
+                <div class="buscador input-group mb-3">
+                    <input type="text" class="form-control" placeholder="¿Que beneficio estás buscando?">
+                    <div class="lupa input-group-prepend">
+                        <span class="input-group-text">
+                            <img src="./img/icon-lupa.png" alt="Lupa">
+                        </span>
+                    </div>
+                </div>
+
+                <ul class="menu">
+                    <li>
+                        <a href="#">
+                            <img src="./img/icon-menu1.svg" alt="Icon Menu">
+                            <span>Tiendas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/icon-menu2.svg" alt="Icon Menu">
+                            <span>Belleza & Wellnes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/icon-menu3.svg" alt="Icon Menu">
+                            <span>Entretención</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/icon-menu4.svg" alt="Icon Menu">
+                            <span>Gastronomía</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/icon-menu5.svg" alt="Icon Menu">
+                            <span>Servicios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/icon-menu6.svg" alt="Icon Menu">
+                            <span>Viajes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Todas las Categorias</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="accordion" id="acordeonFiltros">
+                
+                <div class="card-header" id="headingOne">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                        <img class="mr-2" src="./img/icon-filters.svg" alt="Icon">
+                        Filtrar por categoria
+                    </button>
+                </div>
+            
+                <div id="collapseOne" class="collapse" data-parent="#acordeonFiltros">
+                    
+                    <ul class="menu">
+                        <li>
+                            <a href="#">
+                                <span>Tiendas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Belleza & Wellnes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Entretención</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Gastronomía</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Servicios</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Viajes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Todas las Categorias</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+
+            <div class="container-fluid my-5">
+    
+                <h4>Beneficios <span>Destacados</span></h4>
+                
+                <div class="swiper_beneficios">
+        
+                    <div class="swiper-wrapper">
+    
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio1.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Farmacias Ahumada</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio2.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Fukai</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio3.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Petrizzio</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio4.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Combo Claro</h6>
+                                    <span>Por $ 9.300 para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio5.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Cine Planet</h6>
+                                    <span>Descuento en entradas para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+                            
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    
+                </div>
+
+            </div>
+            
+            <div class="container-app">
+                <img src="./img/claro-club.svg" alt="Claro Club">
+                <div class="px-4 my-4 my-md-0">
+                    <p>Descarga Mi Claro App</p>
+                    <span>Y accede a todos los beneficios del Claro Club</span>
+                </div>
+                <img class="mb-4 mb-md-0" src="./img/qr-code.svg" alt="QR Code">
+                <a class="ml-md-4" href="#">¿Cómo obtener mis beneficios?</a>
+            </div>
+
+            <div class="container-fluid my-5">
+    
+                <h4>Tiendas <a href="#"><span>Ver todos</span></a></h4>
+                
+                <div class="swiper_beneficios">
+        
+                    <div class="swiper-wrapper">
+    
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio1.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Farmacias Ahumada</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio2.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Fukai</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio3.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Petrizzio</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio4.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Combo Claro</h6>
+                                    <span>Por $ 9.300 para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio5.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Cine Planet</h6>
+                                    <span>Descuento en entradas para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+                            
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+            
+                </div>
+
+            </div>
+
+            <div class="container-fluid my-5">
+    
+                <h4>Belleza & Wellness <a href="#"><span>Ver todos</span></a></h4>
+                
+                <div class="swiper_beneficios">
+        
+                    <div class="swiper-wrapper">
+    
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio1.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Farmacias Ahumada</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio2.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Fukai</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio3.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Petrizzio</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio4.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Combo Claro</h6>
+                                    <span>Por $ 9.300 para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio5.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Cine Planet</h6>
+                                    <span>Descuento en entradas para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+                            
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+            
+                </div>
+
+            </div>
+
+            <div class="container-fluid my-5">
+    
+                <h4>Entretención <a href="#"><span>Ver todos</span></a></h4>
+                
+                <div class="swiper_beneficios">
+        
+                    <div class="swiper-wrapper">
+    
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio1.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Farmacias Ahumada</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio2.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Fukai</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio3.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Petrizzio</h6>
+                                    <span>20% dato. Para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio4.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Combo Claro</h6>
+                                    <span>Por $ 9.300 para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="box-beneficio">
+                                <img src="./img/beneficio5.png" alt="Beneficios Claro">   
+                                <div class="content">
+                                    <h6>Cine Planet</h6>
+                                    <span>Descuento en entradas para miembros</span>
+                                    <a href="./beneficio.html">Ver más</a>
+                                </div>                    
+                            </div>
+                        </div>
+                            
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+            
+                </div>
+
+            </div>
+
+            <a class="btn-cupones" href="./cupones.html">Mis cupones</a>
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./script.js"></script>
+
+    </body>
+
+</html>
+
