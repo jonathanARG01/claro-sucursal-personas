@@ -15,12 +15,15 @@
 
         <div class="sucursal-personas">
 
+            <img class="d-none d-md-block w-100" src="./img/banner-desktop.jpg" alt="Banner Desktop">
+            <img class="d-block d-md-none w-100" src="./img/banner-mobile.jpg" alt="Banner Mobile">
+
             <div class="container-filtros container-fluid">
                 
-                <a class="btn-cupones mr-4" href="#">Mis cupones</a>
+                <a class="btn-cupones mr-4" href="./cupones.html">Mis cupones</a>
 
                 <div class="buscador input-group mb-3">
-                    <input type="text" class="form-control" placeholder="¿Que beneficio estás buscando?">
+                    <input list="benefits" id="searchInput" type="text" class="form-control" placeholder="¿Qué beneficio estás buscando?">
                     <div class="lupa input-group-prepend">
                         <span class="input-group-text">
                             <img src="./img/icon-lupa.png" alt="Lupa">
@@ -63,6 +66,12 @@
                         <a href="#">
                             <img src="./img/icon-menu6.svg" alt="Icon Menu">
                             <span>Viajes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/icon-menu7.png" alt="Icon Menu">
+                            <span>Grandes Beneficios</span>
                         </a>
                     </li>
                     <li>
@@ -131,12 +140,14 @@
     
                 <h4>Beneficios <span>Destacados</span></h4>
                 
+                <div class="noMatchesContainer" style="display: none;">No se encontraron coincidencias</div>
+
                 <div class="swiper_beneficios">
         
                     <div class="swiper-wrapper">
     
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="farmacia-ahumada">
                                 <img src="./img/beneficio1.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Farmacias Ahumada</h6>
@@ -147,7 +158,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="fukai">
                                 <img src="./img/beneficio2.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Fukai</h6>
@@ -158,7 +169,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="petrizzio">
                                 <img src="./img/beneficio3.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Petrizzio</h6>
@@ -169,7 +180,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="combo-claro">
                                 <img src="./img/beneficio4.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Combo Claro</h6>
@@ -180,7 +191,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="cine-planet">
                                 <img src="./img/beneficio5.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Cine Planet</h6>
@@ -197,27 +208,19 @@
                 </div>
 
             </div>
-            
-            <div class="container-app">
-                <img src="./img/claro-club.svg" alt="Claro Club">
-                <div class="px-4 my-4 my-md-0">
-                    <p>Descarga Mi Claro App</p>
-                    <span>Y accede a todos los beneficios del Claro Club</span>
-                </div>
-                <img class="mb-4 mb-md-0" src="./img/qr-code.svg" alt="QR Code">
-                <a class="ml-md-4" href="#">¿Cómo obtener mis beneficios?</a>
-            </div>
 
             <div class="container-fluid my-5">
     
                 <h4>Tiendas <a href="#"><span>Ver todos</span></a></h4>
-                
+
+                <div class="noMatchesContainer" style="display: none;">No se encontraron coincidencias</div>
+
                 <div class="swiper_beneficios">
         
                     <div class="swiper-wrapper">
     
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="farmacias-ahumada">
                                 <img src="./img/beneficio1.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Farmacias Ahumada</h6>
@@ -228,7 +231,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="fukai">
                                 <img src="./img/beneficio2.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Fukai</h6>
@@ -239,7 +242,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="petrizzio">
                                 <img src="./img/beneficio3.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Petrizzio</h6>
@@ -250,7 +253,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="combo-claro">
                                 <img src="./img/beneficio4.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Combo Claro</h6>
@@ -261,7 +264,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="cine-planet">
                                 <img src="./img/beneficio5.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Cine Planet</h6>
@@ -283,12 +286,14 @@
     
                 <h4>Belleza & Wellness <a href="#"><span>Ver todos</span></a></h4>
                 
+                <div class="noMatchesContainer" style="display: none;">No se encontraron coincidencias</div>
+
                 <div class="swiper_beneficios">
         
                     <div class="swiper-wrapper">
     
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="farmacias-ahumada">
                                 <img src="./img/beneficio1.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Farmacias Ahumada</h6>
@@ -299,7 +304,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="fukai">
                                 <img src="./img/beneficio2.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Fukai</h6>
@@ -310,7 +315,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="petrizzio">
                                 <img src="./img/beneficio3.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Petrizzio</h6>
@@ -321,7 +326,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="combo-claro">
                                 <img src="./img/beneficio4.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Combo Claro</h6>
@@ -332,7 +337,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="cine-planet">
                                 <img src="./img/beneficio5.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Cine Planet</h6>
@@ -346,7 +351,7 @@
 
                     <div class="swiper-pagination"></div>
             
-                </div>
+                </div>                
 
             </div>
 
@@ -354,12 +359,14 @@
     
                 <h4>Entretención <a href="#"><span>Ver todos</span></a></h4>
                 
+                <div class="noMatchesContainer" style="display: none;">No se encontraron coincidencias</div>
+
                 <div class="swiper_beneficios">
         
                     <div class="swiper-wrapper">
     
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="farmacias-ahumada">
                                 <img src="./img/beneficio1.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Farmacias Ahumada</h6>
@@ -370,7 +377,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="fukai">
                                 <img src="./img/beneficio2.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Fukai</h6>
@@ -381,18 +388,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
-                                <img src="./img/beneficio3.png" alt="Beneficios Claro">   
-                                <div class="content">
-                                    <h6>Petrizzio</h6>
-                                    <span>20% dato. Para miembros</span>
-                                    <a href="./beneficio.html">Ver más</a>
-                                </div>                    
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="combo-claro">
                                 <img src="./img/beneficio4.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Combo Claro</h6>
@@ -403,7 +399,7 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="box-beneficio">
+                            <div class="box-beneficio" data-name="cine-planet">
                                 <img src="./img/beneficio5.png" alt="Beneficios Claro">   
                                 <div class="content">
                                     <h6>Cine Planet</h6>
@@ -417,11 +413,21 @@
 
                     <div class="swiper-pagination"></div>
             
-                </div>
+                </div>                
 
             </div>
 
             <a class="btn-cupones" href="./cupones.html">Mis cupones</a>
+
+            <div class="container-app mt-5">
+                <img src="./img/claro-club.svg" alt="Claro Club">
+                <div class="px-4 my-4 my-md-0">
+                    <p>Descarga Mi Claro App</p>
+                    <span>Y accede a todos los beneficios del Claro Club</span>
+                </div>
+                <img class="mb-4 mb-md-0" src="./img/qr-code.svg" alt="QR Code">
+                <a class="ml-md-4" href="#">¿Cómo obtener mis beneficios?</a>
+            </div>
 
         </div>
 
@@ -430,6 +436,39 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="./script.js"></script>
+
+        <script>
+            
+            document.addEventListener('DOMContentLoaded', function () {
+document.getElementById('searchInput').addEventListener('input', function() {
+    let filterValue = this.value.trim().toUpperCase();
+    let sections = document.querySelectorAll('.container-fluid.my-5');
+
+    sections.forEach(function(section) {
+        let swiperSlides = section.querySelectorAll('.swiper-slide');
+        let noMatches = true; // Variable para verificar si hay coincidencias
+
+        swiperSlides.forEach(function(swiperSlide) {
+            let title = swiperSlide.querySelector('h6').textContent || swiperSlide.querySelector('h6').innerText;
+            if (title.toUpperCase().indexOf(filterValue) > -1) {
+                swiperSlide.style.display = "";
+                noMatches = false; // Se encontró al menos una coincidencia
+            } else {
+                swiperSlide.style.display = "none";
+            }
+        });
+
+        // Mostrar u ocultar el mensaje "No se encontraron coincidencias"
+        let noMatchesContainer = section.querySelector('.noMatchesContainer');
+        noMatchesContainer.style.display = filterValue !== '' && noMatches ? 'block' : 'none';
+    });
+});
+});
+
+
+
+            
+        </script>
 
     </body>
 

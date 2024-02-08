@@ -15,10 +15,10 @@
 
         <div class="sucursal-personas">
 
-            <div class="container mt-3">
+            <div class="container my-3">
 
                 <ol class="breadcrumb d-none d-md-flex">
-                    <li class="breadcrumb-item"><a href="#">Personas</a></li>
+                    <li class="breadcrumb-item"><a href="./index.html">Personas</a></li>
                     <li class="breadcrumb-item"><a href="#">Servicios</a></li>
                     <li class="breadcrumb-item"><a href="#">ClaroClub</a></li>
                     <li class="breadcrumb-item"><a href="#">Destacadas</a></li>
@@ -32,7 +32,7 @@
 
                 <div class="bg-container mt-5">
 
-                    <h3><img src="./img/icon-benefit.svg" alt="Icon Benefit"> 20% de descuento en Farmacia Ahumada</h3>
+                    <h3><img src="./img/icon-benefit2.png" alt="Icon Benefit"> 20% de descuento en Farmacia Ahumada</h3>
 
                     <ul>
                         <li>¿Buscando descuentos en medicamentos, belleza, nutrición, etc?, Genial, porque con Claro Club tienes un 20% de descuento en Farmacias Ahumada en las compras presenciales.</li>
@@ -44,7 +44,7 @@
                         <li>Descuento valido hasta Marzo de 2024 o hasta acabar stock.</li>
                     </ul>
 
-                    <a class="btn-cupones mt-5" data-toggle="modal" data-target="#modalCodigo">Obtener Cupón</a>
+                    <a class="btn-cupones mt-4" data-toggle="modal" data-target="#modalGenerico">Obtener Cupón</a>
                 
                 </div>
 
@@ -60,6 +60,8 @@
             <div class="modal-dialog" role="document">
             
                 <div class="modal-content">
+
+                    <img class="img-header img-fluid w-100" style="display: none;" src="./img/img-single.jpg" alt="Img Single">
                     
                     <div class="modal-header">
                         <h3><img src="./img/icon-benefit.svg" alt="Icon Benefit"> 20% de descuento en Farmacia Ahumada</h3>
@@ -77,10 +79,34 @@
                             </button>
                         </div>
                         <span class="copiado">Código copiado</span>
-                        <p>Tu cupón se ha guardado exitosamente, si lo necesitas recuerda que puedes ir a la sección “<span><a href="./cupones.html">Mis cupones</a></span>” y ver los cupones activos.</p>
-                        <a class="btn-cupones">Descargar cupón</a>
+                        
+                        <p class="text">Tu cupón se ha guardado exitosamente, si lo necesitas recuerda que puedes ir a la sección “<span><a href="./cupones.html">Mis cupones</a></span>” y ver los cupones activos.</p>
+                        
+                        <a class="btn-cupones" id="btnDownload">Descargar cupón</a>
+
                     </div>
 
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Modal Generico -->
+        <div class="modal fade" id="modalGenerico" tabindex="-1" role="dialog" aria-labelledby="modalGenericoLabel" aria-hidden="true">
+            
+            <div class="modal-dialog" role="document">
+            
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quae modi at ipsum quod. Nisi, illum. Doloribus ullam fuga quasi.</p>
+                    </div>
+
+                    <button class="btn btn-close" data-dismiss="modal">Cerrar</button>
 
                 </div>
 
@@ -94,7 +120,60 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="./script.js"></script>
+
+        <script>
+
+            document.getElementById('btnDownload').addEventListener('click', function() {
+
+                // Seleccionar la imagen con la clase .img-header
+                let imgHeader = document.querySelector('.img-header');
+
+                // Hacer visible la imagen antes de capturar el screenshot
+                imgHeader.style.display = 'block';
+
+                // Seleccionar el contenido del modal
+                let modalContent = document.querySelector('.modal-content');
+
+                // Ocultar el elemento <p> con la clase .text para el screenshot
+                let textElement = modalContent.querySelector('.text');
+                textElement.style.display = 'none';
+
+                // Ocultar el botón dentro del elemento .box-code para el screenshot
+                let boxCodeButton = modalContent.querySelector('.box-code button');
+                boxCodeButton.style.display = 'none';
+
+                // Ocultar el botón .close
+                let closeButton = modalContent.querySelector('.close');
+                closeButton.style.display = 'none';
+
+                // Ocultar el botón 'Descargar cupón' para el screenshot
+                let btnDownload = document.getElementById('btnDownload');
+                btnDownload.style.display = 'none';
+
+                // Crear un canvas temporal
+                html2canvas(modalContent).then(function(canvas) {
+                    // Convertir el canvas a una imagen
+                    let modalScreenshot = canvas.toDataURL();
+
+                    // Crear un enlace para descargar la imagen
+                    let link = document.createElement('a');
+                    link.href = modalScreenshot;
+                    link.download = 'cupon.png';
+                    link.click();
+
+                    // Mostrar nuevamente la imagen con la clase .img-header, el botón 'Descargar cupón', el elemento <p> con la clase .text y el botón dentro del elemento .box-code
+                    imgHeader.style.display = 'none';
+                    btnDownload.style.display = 'flex';
+                    textElement.style.display = 'block';
+                    boxCodeButton.style.display = 'block';
+                    closeButton.style.display = 'block';
+                });
+                
+            });
+                
+        </script>
 
     </body>
 
